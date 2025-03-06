@@ -980,7 +980,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2948,7 +2948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cameraTransform: {fileID: 963194228}
-  _movementForce: 10
+  _movementForce: 75
   _squatHeight: 4
   _isSquating: 0
   _doingMovement: 0
@@ -3194,6 +3194,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f4118f5c2c34597469c5802b3b554327, type: 3}
     - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
         type: 3}
+      propertyPath: _doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 45daac28410c1a7469702486d3c1507e, type: 3}
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
       propertyPath: doorType
       value: 1
       objectReference: {fileID: 0}
@@ -3206,6 +3211,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IsExitDoor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
+      propertyPath: _neededKey
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2635378537792458528, guid: 4f7a3e454645fb248b972a03613511bb,
         type: 3}
@@ -3449,7 +3459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a488d581a2eb145836a2f595ab4e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationSpeed: 2
+  _rotationSpeed: 35
   _clampAngle: 80
 --- !u!1 &1018100553
 GameObject:
@@ -8115,6 +8125,16 @@ PrefabInstance:
       propertyPath: clip
       value: 
       objectReference: {fileID: 8300000, guid: f4118f5c2c34597469c5802b3b554327, type: 3}
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
+      propertyPath: _doorSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: e85a355d36faa5d4baaa3f2bbe6c1c62, type: 3}
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
+      propertyPath: _neededKey
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2635378538502679628, guid: 4f7a3e454645fb248b972a03613511bb,
         type: 3}
       propertyPath: m_LocalScale.z
@@ -9146,11 +9166,11 @@ MonoBehaviour:
   _drawerIndex: 3
   _speed: 2
   _isOpen: 0
-  _isLocked: 0
+  _isLocked: 1
   _animated: 1
   _opened: {fileID: 240152524}
   _closed: {fileID: 0}
-  _neededKey: 0
+  _neededKey: 1
   _itemToOpen: {fileID: 0}
   _textToShowWhenOpen: 
   _item: {fileID: 0}
@@ -9557,7 +9577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: 68cd3c4b5d5a51746841a7ffdca4d94a, type: 2}
 --- !u!1 &6176002507366789004
 GameObject:
   m_ObjectHideFlags: 0

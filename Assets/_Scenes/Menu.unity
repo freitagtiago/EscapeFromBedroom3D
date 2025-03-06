@@ -1439,6 +1439,11 @@ PrefabInstance:
       propertyPath: IsExitDoor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
+      propertyPath: _neededKey
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2635378537792458528, guid: 4f7a3e454645fb248b972a03613511bb,
         type: 3}
       propertyPath: m_IsActive
@@ -5005,6 +5010,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1571531548456816311}
     m_Modifications:
+    - target: {fileID: 2579182586390833505, guid: 4f7a3e454645fb248b972a03613511bb,
+        type: 3}
+      propertyPath: _neededKey
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2635378538855348066, guid: 4f7a3e454645fb248b972a03613511bb,
         type: 3}
       propertyPath: m_Name
@@ -6098,7 +6108,7 @@ MonoBehaviour:
   _animated: 0
   _opened: {fileID: 0}
   _closed: {fileID: 0}
-  _neededKey: 0
+  _neededKey: 1
   _itemToOpen: {fileID: 0}
   _textToShowWhenOpen: 
   _item: {fileID: 0}
