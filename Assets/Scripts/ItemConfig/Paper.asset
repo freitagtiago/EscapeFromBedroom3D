@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: Paper
   m_EditorClassIdentifier: 
-  itemName: Rascunho
-  itemInfo: "A arte \xE9 cheia de interpreta\xE7\xF5es. "
-  itemType: 1
-  keyType: 0
-  audioClip: {fileID: 8300000, guid: 3acdf8b156299524591503373020c2d4, type: 3}
+  _itemName: Rascunho
+  _itemInfo: "A arte \xE9 cheia de interpreta\xE7\xF5es"
+  _itemType: 1
+  _keyType: 0
+  _audioClip: {fileID: 8300000, guid: 3acdf8b156299524591503373020c2d4, type: 3}

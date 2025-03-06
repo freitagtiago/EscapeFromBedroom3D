@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: Knife
   m_EditorClassIdentifier: 
-  itemName: Faca
-  itemInfo: "Uma faca sem fio. Ela pode n\xE3o cortar mas deve haver alguma utilidade."
-  itemType: 1
-  keyType: 0
-  audioClip: {fileID: 8300000, guid: 236b5c4b81a908146bbdb252f1a41946, type: 3}
+  _itemName: Faca Sem Fio
+  _itemInfo: "Uma faca sem fio. Ela pode n\xE3o cortar mas deve haver alguma utilidade."
+  _itemType: 1
+  _keyType: 0
+  _audioClip: {fileID: 8300000, guid: 236b5c4b81a908146bbdb252f1a41946, type: 3}

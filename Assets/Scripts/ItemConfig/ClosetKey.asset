@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: ClosetKey
   m_EditorClassIdentifier: 
-  itemName: Chave do closet
-  itemInfo: Use esta chave para abrir o closet.
-  itemType: 0
-  keyType: 2
-  audioClip: {fileID: 8300000, guid: 91f73d40885b3f24f9c5381d9aa418d1, type: 3}
+  _itemName: Chave do Closet
+  _itemInfo: Use esta chave para abrir o closet.
+  _itemType: 0
+  _keyType: 2
+  _audioClip: {fileID: 8300000, guid: 91f73d40885b3f24f9c5381d9aa418d1, type: 3}

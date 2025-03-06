@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: DrawerKey
   m_EditorClassIdentifier: 
-  itemName: Chave de gaveteiro de metal
-  itemInfo: Use essa chave para abrir uma gaveta trancada no gaveteiro.
-  itemType: 0
-  keyType: 1
-  audioClip: {fileID: 8300000, guid: 91f73d40885b3f24f9c5381d9aa418d1, type: 3}
+  _itemName: Chave da Escrivaninha de Metal
+  _itemInfo: Use essa chave para abrir uma gaveta trancada na escrivaninha.
+  _itemType: 0
+  _keyType: 1
+  _audioClip: {fileID: 8300000, guid: 91f73d40885b3f24f9c5381d9aa418d1, type: 3}

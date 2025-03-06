@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!54 &115245823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -714,6 +714,12 @@ PrefabInstance:
     - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: sentence
+      value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
+        danos \xE0 sanidade e afetou o sono."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
       value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
         danos \xE0 sanidade e afetou o sono."
       objectReference: {fileID: 0}
@@ -1707,6 +1713,13 @@ PrefabInstance:
         \"Paciente sofreu com rea\xE7\xF5es adversas, sendo as principais sono pesado
         por in\xFAmeros dias, convuls\xF5es e fraqueza\"."
       objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou um prontu\xE1rio m\xE9dico com o seguinte relato:
+        \"Paciente sofreu com rea\xE7\xF5es adversas, sendo as principais sono pesado
+        por in\xFAmeros dias, convuls\xF5es e fraqueza\"."
+      objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: m_Name
@@ -1827,7 +1840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!54 &540131929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1971,6 +1984,12 @@ PrefabInstance:
     - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: sentence
+      value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
+        danos \xE0 sanidade e afetou o sono."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
       value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
         danos \xE0 sanidade e afetou o sono."
       objectReference: {fileID: 0}
@@ -2246,7 +2265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627779808}
   m_Layer: 0
-  m_Name: key
+  m_Name: DrawerKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2285,6 +2304,12 @@ PrefabInstance:
     - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: sentence
+      value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
+        danos \xE0 sanidade e afetou o sono."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
       value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
         danos \xE0 sanidade e afetou o sono."
       objectReference: {fileID: 0}
@@ -3073,6 +3098,12 @@ PrefabInstance:
       value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
         danos \xE0 sanidade e afetou o sono."
       objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou mais relatos sobre uso de medicamentos que causou
+        danos \xE0 sanidade e afetou o sono."
+      objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: m_Name
@@ -3469,7 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!64 &1018100556
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3752,7 +3783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!54 &1063409758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3932,7 +3963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!54 &1115702072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4456,12 +4487,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _warningDuration: 3
-  _initText: 
+  _initText: Hora 02:57 Dia Desconhecido
   _messagePanel: {fileID: 2086027454}
   _inventoryPanel: {fileID: 1917834052}
   _messageDisplayer: {fileID: 490372305}
   _usePillsText: {fileID: 2082735672}
-  _returnToMenu: {fileID: 579918307}
+  _returnToMenu: {fileID: 1666801131}
 --- !u!1 &1271477423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4507,6 +4538,12 @@ PrefabInstance:
       propertyPath: sentence
       value: "Voc\xEA encontrou mais relatos sobre pausa no teste de algum medicamento
         em fun\xE7\xE3o de danos \xE0 sanidade do paciente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou mais relatos sobre pausa no teste de algum medicamento
+        em fun\xE7\xE3o de danos \xE0 sanidade do paciente. "
       objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
@@ -5071,6 +5108,13 @@ PrefabInstance:
         \"Paciente teve seu tratamento interrompido pois a medica\xE7\xE3o afetou
         sua sanidade\"."
       objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou um prontu\xE1rio m\xE9dico com o seguinte relato:
+        \"Paciente teve seu tratamento interrompido pois a medica\xE7\xE3o afetou
+        sua sanidade\". "
+      objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: m_Name
@@ -5211,7 +5255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: 21d01285dee3b74469b31df2dd3eea86, type: 2}
 --- !u!54 &1642099796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6262,6 +6306,12 @@ PrefabInstance:
       value: "Voc\xEA encontrou um prontu\xE1rio m\xE9dico com o seguinte relato:
         \"Paciente veio a falecer em decorr\xEAncia de efeitos adversos da medica\xE7\xE3o\"."
       objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: " Voc\xEA encontrou um prontu\xE1rio m\xE9dico com o seguinte relato:
+        \"Paciente veio a falecer em decorr\xEAncia de efeitos adversos da medica\xE7\xE3o\"."
+      objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
       propertyPath: m_Name
@@ -6561,6 +6611,12 @@ PrefabInstance:
       propertyPath: sentence
       value: "Voc\xEA encontrou mais relatos sobre pausa no teste de algum medicamento
         em fun\xE7\xE3o de danos \xE0 sanidade do paciente."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou mais relatos sobre pausa no teste de algum medicamento
+        em fun\xE7\xE3o de danos \xE0 sanidade do paciente. "
       objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
@@ -7391,9 +7447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176d5d1ab11390d4d8f4830e1cd8bc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: e04fceb2bb18ca443a0d61524014b53e, type: 2}
   _isLocked: 1
-  _itemToOpen: {fileID: 0}
+  _itemToOpen: {fileID: 11400000, guid: 9a5ae47e252ccda49976821667141889, type: 2}
 --- !u!1 &943047688755498760
 GameObject:
   m_ObjectHideFlags: 0
@@ -7653,7 +7709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: e4c384cabb9e7f54dac98c5467dff6af, type: 2}
 --- !u!1001 &1704499971131278354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7833,6 +7889,12 @@ PrefabInstance:
       propertyPath: sentence
       value: "Voc\xEA encontrou outro relato de paciente que faleceu ap\xF3s uso
         de alguma medica\xE7\xE3o."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125646672928340935, guid: 9c42fa991ad80be4798e8099b4ffcdce,
+        type: 3}
+      propertyPath: _sentence
+      value: "Voc\xEA encontrou outro relato de paciente que faleceu ap\xF3s uso
+        de alguma medica\xE7\xE3o. "
       objectReference: {fileID: 0}
     - target: {fileID: 7125646672928340954, guid: 9c42fa991ad80be4798e8099b4ffcdce,
         type: 3}
@@ -8274,8 +8336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
-  _sentence: 
+  _item: {fileID: 11400000, guid: 47725a0577e451f45b2a37328490070f, type: 2}
+  _sentence: "Uma pintura antiga, mas parece ter algo escondido atr\xE1s."
 --- !u!4 &2526987272859911172
 Transform:
   m_ObjectHideFlags: 0
@@ -8603,15 +8665,15 @@ MonoBehaviour:
   _speed: 2
   _isOpen: 0
   _isLocked: 0
-  _animated: 0
-  _opened: {fileID: 0}
+  _animated: 1
+  _opened: {fileID: 1083426682}
   _closed: {fileID: 0}
   _neededKey: 0
   _itemToOpen: {fileID: 0}
   _textToShowWhenOpen: 
   _item: {fileID: 0}
-  _opening: {fileID: 0}
-  _locked: {fileID: 0}
+  _opening: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+  _locked: {fileID: 8300000, guid: 765488a0d1837864a80b6b6e69b603d2, type: 3}
 --- !u!54 &3567189506556736330
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8926,7 +8988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3780159587632260213}
   m_Layer: 0
-  m_Name: SimpleBook1
+  m_Name: Diary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9081,19 +9143,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canMove: 0
-  _drawerIndex: 0
+  _drawerIndex: 3
   _speed: 2
   _isOpen: 0
   _isLocked: 0
-  _animated: 0
-  _opened: {fileID: 0}
+  _animated: 1
+  _opened: {fileID: 240152524}
   _closed: {fileID: 0}
   _neededKey: 0
   _itemToOpen: {fileID: 0}
   _textToShowWhenOpen: 
   _item: {fileID: 0}
-  _opening: {fileID: 0}
-  _locked: {fileID: 0}
+  _opening: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+  _locked: {fileID: 8300000, guid: 765488a0d1837864a80b6b6e69b603d2, type: 3}
 --- !u!1 &5066563871093117100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9177,7 +9239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!4 &5307751112276146909
 Transform:
   m_ObjectHideFlags: 0
@@ -9374,7 +9436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _item: {fileID: 0}
-  _sentence: 
+  _sentence: Uma pintura antiga.
 --- !u!33 &5855941824561325676
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9841,7 +9903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 0}
+  _item: {fileID: 11400000, guid: 9a5ae47e252ccda49976821667141889, type: 2}
 --- !u!4 &6703820419914373942
 Transform:
   m_ObjectHideFlags: 0
@@ -10310,19 +10372,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canMove: 0
-  _drawerIndex: 0
+  _drawerIndex: 2
   _speed: 2
   _isOpen: 0
   _isLocked: 0
-  _animated: 0
-  _opened: {fileID: 0}
+  _animated: 1
+  _opened: {fileID: 210315064}
   _closed: {fileID: 0}
   _neededKey: 0
   _itemToOpen: {fileID: 0}
   _textToShowWhenOpen: 
   _item: {fileID: 0}
-  _opening: {fileID: 0}
-  _locked: {fileID: 0}
+  _opening: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+  _locked: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
 --- !u!54 &8039795340305513425
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10631,9 +10693,30 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
     - target: {fileID: 8826310900363856358, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
+      propertyPath: _locked
+      value: 
+      objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+    - target: {fileID: 8826310900363856358, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
       propertyPath: opening
       value: 
       objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+    - target: {fileID: 8826310900363856358, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _opening
+      value: 
+      objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+    - target: {fileID: 8826310900363856358, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _drawerIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826310900363856358, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _textToShowWhenOpen
+      value: "Parece n\xE3o haver nada dentro dessa gaveta al\xE9m de insetos mortos
+        e poeira."
+      objectReference: {fileID: 0}
     - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
       propertyPath: locked
@@ -10641,14 +10724,40 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
     - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
+      propertyPath: _locked
+      value: 
+      objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+    - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
       propertyPath: opening
       value: 
       objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+    - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _opening
+      value: 
+      objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+    - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _drawerIndex
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
       propertyPath: textToShowWhenOpen
       value: "S\xF3 h\xE1 poeira nessa gaveta."
       objectReference: {fileID: 0}
+    - target: {fileID: 8826310900635789610, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _textToShowWhenOpen
+      value: "S\xF3 h\xE1 poeira nessa gaveta"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _item
+      value: 
+      objectReference: {fileID: 11400000, guid: 09c23337c44bd804aad1e3935acdcad0,
+        type: 2}
     - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
       propertyPath: locked
@@ -10656,7 +10765,17 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
     - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
+      propertyPath: _locked
+      value: 
+      objectReference: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
       propertyPath: opening
+      value: 
+      objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _opening
       value: 
       objectReference: {fileID: 8300000, guid: 844e600f433e6ab4282a267d4e21ccbf, type: 3}
     - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
@@ -10672,7 +10791,23 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
         type: 3}
+      propertyPath: _itemToOpen
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a5ae47e252ccda49976821667141889,
+        type: 2}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _drawerIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
       propertyPath: textToShowWhenOpen
+      value: "N\xE3o h\xE1 nada aqui."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8826310902350413947, guid: 9e7f07387c41ad749b6ac875c51b0ee7,
+        type: 3}
+      propertyPath: _textToShowWhenOpen
       value: "N\xE3o h\xE1 nada aqui."
       objectReference: {fileID: 0}
     - target: {fileID: 9076972601192552912, guid: 9e7f07387c41ad749b6ac875c51b0ee7,

@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class ItemConfig : ScriptableObject
 {
-    public string _itemName; 
+    public string _itemName;
+    [TextArea]
     public string _itemInfo;
     public ItemType _itemType;
     public KeyType _keyType;

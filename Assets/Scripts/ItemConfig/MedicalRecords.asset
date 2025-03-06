@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: MedicalRecords
   m_EditorClassIdentifier: 
-  itemName: 
-  itemInfo: 
-  itemType: 0
-  keyType: 0
-  audioClip: {fileID: 0}
+  _itemName: "Bulas de Rem\xE9dio"
+  _itemInfo: "V\xE1rias bulas de rem\xE9dios son\xEDferos e anti-inflamat\xF3rios
+    que voc\xEA desconhece. "
+  _itemType: 1
+  _keyType: 0
+  _audioClip: {fileID: 8300000, guid: 3acdf8b156299524591503373020c2d4, type: 3}

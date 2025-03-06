@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3660324e132024394092ae485f9349, type: 3}
   m_Name: Book
   m_EditorClassIdentifier: 
-  itemName: "Di\xE1rio"
-  itemInfo: "Di\xE1rio com relatos sobre a vida de algu\xE9m que serviu como cobaia
+  _itemName: "Di\xE1rio"
+  _itemInfo: "Di\xE1rio com relatos sobre a vida de algu\xE9m que serviu como cobaia
     para algum tipo de teste. Este di\xE1rio est\xE1 muito empoeirado, deve ter estado
-    ai por muito tempo."
-  itemType: 1
-  keyType: 0
-  audioClip: {fileID: 8300000, guid: 3acdf8b156299524591503373020c2d4, type: 3}
+    a\xED por muito tempo."
+  _itemType: 0
+  _keyType: 0
+  _audioClip: {fileID: 8300000, guid: 3acdf8b156299524591503373020c2d4, type: 3}
