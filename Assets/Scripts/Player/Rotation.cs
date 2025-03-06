@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    [SerializeField] float rotationSpeed = 2f;
-    [SerializeField] float clampAngle = 80;
+    [SerializeField] private float _rotationSpeed = 2f;
+    [SerializeField] private float _clampAngle = 80;
 
-    Mover player;
-    float verticalRotation;
-    float horizontalRotation;
+    private Mover _playerMover;
+    private float _verticalRotation;
+    private float _horizontalRotation;
 
     private void Awake()
     {
-        player = GetComponentInParent<Mover>();
+        _playerMover = GetComponentInParent<Mover>();
     }
 
     private void Start()
     {
-        verticalRotation = transform.localEulerAngles.x;
-        horizontalRotation = player.transform.eulerAngles.y;
+        _verticalRotation = transform.localEulerAngles.x;
+        _horizontalRotation = _playerMover.transform.eulerAngles.y;
 
     }
     private void FixedUpdate()
@@ -32,13 +32,13 @@ public class Rotation : MonoBehaviour
         float verticalInput = -Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        verticalRotation += verticalInput * rotationSpeed * Time.deltaTime;
-        horizontalRotation += horizontalInput * rotationSpeed * Time.deltaTime;
+        _verticalRotation += verticalInput * _rotationSpeed * Time.deltaTime;
+        _horizontalRotation += horizontalInput * _rotationSpeed * Time.deltaTime;
 
-        verticalRotation = Mathf.Clamp(verticalRotation, -clampAngle, clampAngle);
+        _verticalRotation = Mathf.Clamp(_verticalRotation, -_clampAngle, _clampAngle);
 
-        transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
-        player.transform.rotation = Quaternion.Euler(0f, horizontalRotation, 0f);
+        transform.localRotation = Quaternion.Euler(_verticalRotation, 0f, 0f);
+        _playerMover.transform.rotation = Quaternion.Euler(0f, _horizontalRotation, 0f);
     }
 }
 

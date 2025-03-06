@@ -5,17 +5,17 @@ using TMPro;
 
 public class ItemSlotUI : MonoBehaviour
 {
-    ItemConfig itemOnSlot;
-    [SerializeField] TMP_Text itemName;
+    private ItemConfig _itemOnSlot;
+    [SerializeField] private TMP_Text _itemName;
 
     public void Setup(ItemConfig item)
     {
-        this.itemOnSlot = item;
-        this.itemName.text = itemOnSlot.itemName;
+        this._itemOnSlot = item;
+        this._itemName.text = _itemOnSlot._itemName;
     }
 
     public void SelectItem()
     {
-        InventoryUI.instance.SelectItem(itemOnSlot);
+        InventoryUI.Instance.SelectItem(_itemOnSlot);
     }
 }

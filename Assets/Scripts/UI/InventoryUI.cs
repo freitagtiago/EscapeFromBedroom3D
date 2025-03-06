@@ -5,23 +5,22 @@ using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
-    public static InventoryUI instance;
-    [SerializeField] ItemSlotUI itemSlotPrefab;
-    [SerializeField] TMP_Text itemName;
-    [SerializeField] TMP_Text itemInfo;
+    public static InventoryUI Instance;
+    [SerializeField] private ItemSlotUI _itemSlotPrefab;
+    [SerializeField] private TMP_Text _itemName;
+    [SerializeField] private TMP_Text _itemInfo;
  
     private void Awake()
     {
-        instance = this;
+        Instance = this;
     }
 
     public void LoadItems()
     {
         SelectItem(null);
-        List<ItemConfig> items = Inventory.instance.GetItemList();
-        foreach (ItemConfig item in items)
+        foreach (ItemConfig item in Inventory.Instance.GetItemList())
         {
-            var slot = Instantiate(itemSlotPrefab,transform);
+            ItemSlotUI slot = Instantiate(_itemSlotPrefab,transform);
             slot.Setup(item);
         }
     }
@@ -38,13 +37,13 @@ public class InventoryUI : MonoBehaviour
     {
         if (item)
         {
-            itemName.text = item.itemName;
-            itemInfo.text = item.itemInfo;
+            _itemName.text = item._itemName;
+            _itemInfo.text = item._itemInfo;
         }
         else
         {
-            itemName.text = "";
-            itemInfo.text = "";
+            _itemName.text = "";
+            _itemInfo.text = "";
         }
     }
     

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Paper : MonoBehaviour, IInteractable
 {
-    [SerializeField] string sentence;
+    [SerializeField] private string _sentence;
 
     public void Interact()
     {
-        UIHandler.instance.MessageDisplayer(sentence);
+        UIHandler.Instance.MessageDisplayer(_sentence);
     }
 }

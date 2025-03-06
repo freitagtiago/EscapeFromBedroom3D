@@ -27,15 +27,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8555769268291584874}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 9.28, y: 1.19, z: -8.86}
   m_LocalScale: {x: 250, y: 200, z: 200}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8826310900363856357}
   - {fileID: 8826310902350413946}
   - {fileID: 8826310900635789609}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
 --- !u!33 &5357095427164739189
 MeshFilter:
@@ -56,6 +57,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -93,10 +95,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8555769268291584874}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -110,9 +123,17 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8555769268291584874}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 4
+  serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5230232666162964297, guid: 8c8f3c8fbaa303e4cb12e9ee10e252d3, type: 3}
@@ -142,12 +163,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900363856356}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9076972601192552912}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8826310900363856344
 Rigidbody:
@@ -156,10 +178,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900363856356}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -173,9 +206,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900363856356}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.01, y: 0.00694702, z: 0.0031860115}
   m_Center: {x: 0, y: 0.0015264907, z: -0.0034069999}
 --- !u!114 &8826310900363856358
@@ -190,18 +231,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 5
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 0
-  opened: {fileID: 0}
-  closed: {fileID: 0}
-  neededKey: 0
-  textToShowWhenOpen: "Parece n\xE3o haver nada dentro dessa gaveta al\xE9m de poeira
-    e alguns insetos mortos."
-  item: {fileID: 0}
+  _canMove: 0
+  _drawerIndex: 0
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!1 &8826310900635789608
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,12 +271,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900635789608}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.00689}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9076972601192552912}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8826310900635789612
 Rigidbody:
@@ -242,10 +286,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900635789608}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -259,9 +314,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310900635789608}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.01, y: 0.00694702, z: 0.0031860115}
   m_Center: {x: 0, y: 0.0015264907, z: -0.0034069999}
 --- !u!114 &8826310900635789610
@@ -276,17 +339,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 7
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 0
-  opened: {fileID: 0}
-  closed: {fileID: 0}
-  neededKey: 0
-  textToShowWhenOpen: 
-  item: {fileID: 0}
+  _canMove: 0
+  _drawerIndex: 2
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!1 &8826310902350413945
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,12 +379,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310902350413945}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.00339}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9076972601192552912}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8826310902350413949
 Rigidbody:
@@ -327,10 +394,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310902350413945}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
@@ -344,9 +422,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8826310902350413945}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 0.01, y: 0.00694702, z: 0.0031860115}
   m_Center: {x: 0, y: 0.0015264907, z: -0.0034069999}
 --- !u!114 &8826310902350413947
@@ -361,14 +447,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 6
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 0
-  opened: {fileID: 0}
-  closed: {fileID: 0}
-  neededKey: 0
-  textToShowWhenOpen: Essa gaveta esta emperrada.
-  item: {fileID: 11400000, guid: 09c23337c44bd804aad1e3935acdcad0, type: 2}
+  _canMove: 0
+  _drawerIndex: 1
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}

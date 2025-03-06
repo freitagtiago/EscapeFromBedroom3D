@@ -8,7 +8,7 @@ public class Pills : MonoBehaviour
     {
         if (other.GetComponent<Mover>())
         {
-            UIHandler.instance.HandlePills(true);
+            UIHandler.Instance.HandlePills(true);
         }
     }
 
@@ -16,7 +16,7 @@ public class Pills : MonoBehaviour
     {
         if (other.GetComponent<Mover>())
         {
-            UIHandler.instance.HandlePills(false);
+            UIHandler.Instance.HandlePills(false);
         }
 
 

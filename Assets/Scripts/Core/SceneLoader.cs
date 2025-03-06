@@ -3,34 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Loader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] float timeToReload = 2f;
-    public static Loader instance;
+    [SerializeField] private float _timeToReload = 2f;
+    public static SceneLoader Instance;
 
     private void Awake()
     {
-        if (instance)
+        if (Instance != null)
         {
             Destroy(gameObject);
+            return;
         }
         else
         {
-            instance = this;
-            DontDestroyOnLoad(instance);
+            Instance = this;
         }
+        DontDestroyOnLoad(Instance);
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene(1);
-        AudioPlayer.instance.PlayMusic(1);
+        AudioPlayer.Instance.PlayMusic(1);
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
-        AudioPlayer.instance.PlayMusic(0);
+        AudioPlayer.Instance.PlayMusic(0);
     }
 
     public void ReloadScene()
@@ -40,9 +41,9 @@ public class Loader : MonoBehaviour
 
     private IEnumerator Reload()
     {
-        UIHandler.instance.WarningRoutine("Você tomou a pípula. É um ciclo sem fim");
-        yield return new WaitForSecondsRealtime(timeToReload);
+        UIHandler.Instance.WarningRoutine("Você tomou a pípula. É um ciclo sem fim");
+        yield return new WaitForSecondsRealtime(_timeToReload);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        AudioPlayer.instance.PlayMusic(1);
+        AudioPlayer.Instance.PlayMusic(1);
     }
 }

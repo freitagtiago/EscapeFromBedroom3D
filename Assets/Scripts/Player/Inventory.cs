@@ -1,44 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
-    public static Inventory instance;
-    [SerializeField] List<ItemConfig> items = new List<ItemConfig>();
+    public static Inventory Instance;
+    [SerializeField] private List<ItemConfig>  _itemList = new List<ItemConfig>();
 
     private void Awake()
     {
-        if (instance)
+        if (Instance != null)
         {
             Destroy(this.gameObject);
         }
         else
         {
-            instance = this;
+            Instance = this;
         }
     }
 
     public void AddItem(ItemConfig itemToAdd)
     {
-        if (itemToAdd.audioClip)
+        if (itemToAdd._audioClip)
         {
-            Debug.Log("tocou");
-            AudioSource.PlayClipAtPoint(itemToAdd.audioClip, transform.position);
+            AudioSource.PlayClipAtPoint(itemToAdd._audioClip, transform.position);
         }
-        items.Add(itemToAdd);
-        UIHandler.instance.WarningRoutine("O item " + itemToAdd.itemName + " foi encontrado");
+        _itemList.Add(itemToAdd);
+        UIHandler.Instance.WarningRoutine($"O item {itemToAdd._itemName} foi encontrado");
     }
 
     public bool HasThisKey(KeyType neededKey)
     {
         bool found = false;
-        foreach(ItemConfig item in items)
+
+        for(int i = _itemList.Count - 1; i != 0; i--)
         {
-            if(item.keyType == neededKey)
+            if (_itemList[i]._keyType == neededKey)
             {
                 found = true;
-                items.Remove(item);
+                _itemList.Remove(_itemList[i]);
                 break;
             }
         }
@@ -48,7 +49,7 @@ public class Inventory : MonoBehaviour
     public bool HasThisItem(ItemConfig itemNeeded)
     {
         bool found = false;
-        foreach(ItemConfig item in items)
+        foreach(ItemConfig item in _itemList)
         {
             if(itemNeeded == item)
             {
@@ -62,6 +63,6 @@ public class Inventory : MonoBehaviour
 
     public List<ItemConfig> GetItemList()
     {
-        return items;
+        return _itemList;
     }
 }

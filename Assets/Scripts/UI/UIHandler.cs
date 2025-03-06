@@ -5,60 +5,61 @@ using UnityEngine;
 
 public class UIHandler : MonoBehaviour
 {
-    [SerializeField] float warningDuration = 3f;
-    [SerializeField] string initText;
-    [SerializeField] GameObject messagePanel;
-    [SerializeField] GameObject inventoryPanel;
-    [SerializeField] TMP_Text messageDisplayer;
-    [SerializeField] GameObject usePillsText;
-    [SerializeField] GameObject returnToMenu;
+    public static UIHandler Instance;
 
-    public static UIHandler instance;
-    TMP_Text warning;
-    Mover mover;
+    [SerializeField] private float _warningDuration = 3f;
+    [SerializeField] private string _initText;
+    [SerializeField] private GameObject _messagePanel;
+    [SerializeField] private GameObject _inventoryPanel;
+    [SerializeField] private TMP_Text _messageDisplayer;
+    [SerializeField] private GameObject _usePillsText;
+    [SerializeField] private GameObject _returnToMenu;
+
+    private TMP_Text _warning;
+    private Mover _playerMover;
 
     private void Awake()
     {
-        instance = this;
-        warning = GetComponentInChildren<TMP_Text>();
-        mover = FindObjectOfType<Mover>();
+        Instance = this;
+        _warning = GetComponentInChildren<TMP_Text>();
+        _playerMover = FindObjectOfType<Mover>();
     }
 
     private void Start()
     {
-        warning.gameObject.SetActive(false);
-        WarningRoutine(initText);
+        _warning.gameObject.SetActive(false);
+        WarningRoutine(_initText);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && !returnToMenu.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.I) && !_returnToMenu.activeInHierarchy)
         {
-            if (inventoryPanel.activeInHierarchy)
+            if (_inventoryPanel.activeInHierarchy)
             {
-                mover.SetCanMove(true);
-                InventoryUI.instance.ResetPanel();
-                inventoryPanel.SetActive(false);
+                _playerMover.SetCanMove(true);
+                InventoryUI.Instance.ResetPanel();
+                _inventoryPanel.SetActive(false);
             }
             else
             {
-                inventoryPanel.SetActive(true);
-                mover.SetCanMove(false);
-                InventoryUI.instance.LoadItems();
+                _inventoryPanel.SetActive(true);
+                _playerMover.SetCanMove(false);
+                InventoryUI.Instance.LoadItems();
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape) && !inventoryPanel.activeInHierarchy)
+        if(Input.GetKeyDown(KeyCode.Escape) && !_inventoryPanel.activeInHierarchy)
         {
-            if (returnToMenu.activeInHierarchy)
+            if (_returnToMenu.activeInHierarchy)
             {
-                returnToMenu.SetActive(false);
-                mover.SetCanMove(true);
+                _returnToMenu.SetActive(false);
+                _playerMover.SetCanMove(true);
             }
             else
             {
-                returnToMenu.SetActive(true);
-                mover.SetCanMove(false);
+                _returnToMenu.SetActive(true);
+                _playerMover.SetCanMove(false);
             }
         }
     }
@@ -72,38 +73,38 @@ public class UIHandler : MonoBehaviour
     public IEnumerator ShowWarning(string textToShow)
     {
         textToShow = textToShow.ToUpper();
-        warning.gameObject.SetActive(true);
-        warning.text = textToShow;
-        yield return new WaitForSecondsRealtime(warningDuration);
-        warning.text = "";
-        warning.gameObject.SetActive(false);
+        _warning.gameObject.SetActive(true);
+        _warning.text = textToShow;
+        yield return new WaitForSecondsRealtime(_warningDuration);
+        _warning.text = "";
+        _warning.gameObject.SetActive(false);
     }
 
     public void MessageDisplayer(string textToShow)
     {
-        mover.SetCanMove(false);
-        messagePanel.SetActive(true);
-        messageDisplayer.text = textToShow;
+        _playerMover.SetCanMove(false);
+        _messagePanel.SetActive(true);
+        _messageDisplayer.text = textToShow;
     }
 
     public void ClosePanel()
     {
-        mover.SetCanMove(true);
-        messagePanel.SetActive(false);
+        _playerMover.SetCanMove(true);
+        _messagePanel.SetActive(false);
     }
 
     public void HandlePills(bool value)
     {
-        usePillsText.SetActive(value);
+        _usePillsText.SetActive(value);
     }
 
     public void Reload()
     {
-        Loader.instance.ReloadScene();
+        SceneLoader.Instance.ReloadScene();
     }
 
     public void ReturnToMainMenu()
     {
-        Loader.instance.LoadMainMenu();
+        SceneLoader.Instance.LoadMainMenu();
     }
 }

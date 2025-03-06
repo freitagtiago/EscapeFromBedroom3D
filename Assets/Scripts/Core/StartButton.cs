@@ -6,6 +6,6 @@ public class StartButton : MonoBehaviour
 {
     public void StartGame()
     {
-        FindObjectOfType<Loader>().StartGame();
+        FindObjectOfType<SceneLoader>().StartGame();
     }
 }

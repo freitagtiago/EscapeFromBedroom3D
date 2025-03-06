@@ -4,34 +4,40 @@ using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] KeyType neededKey = KeyType.None;
-    [SerializeField] bool isLocked = true;
-    [SerializeField] AudioClip clip;
-    Animator anim;    
+    [SerializeField] private KeyType _neededKey = KeyType.None;
+    [SerializeField] private bool _isLocked = true;
+    [SerializeField] private AudioClip _doorSFX;
+    Animator anim;
 
-    private void Awake() => anim = GetComponentInParent<Animator>();
+    private void Awake()
+    {
+        anim = GetComponentInParent<Animator>();
+    }
 
     public void Interact()
     {
-        if (!isLocked) { return; }
+        if (!_isLocked) 
+        { 
+            return; 
+        }
 
-        if (Inventory.instance.HasThisKey(neededKey))
+        if (Inventory.Instance.HasThisKey(_neededKey))
         {
-            UIHandler.instance.WarningRoutine("A porta foi destrancada");
-            if(neededKey == KeyType.ExitDoor)
+            UIHandler.Instance.WarningRoutine("A porta foi destrancada");
+            if(_neededKey == KeyType.ExitDoor)
             {
-                AudioSource.PlayClipAtPoint(clip, transform.position);
+                AudioSource.PlayClipAtPoint(_doorSFX, transform.position);
                 anim.SetTrigger("exitDoorOpen");
             }
             else
             {
-                AudioSource.PlayClipAtPoint(clip, transform.position);
+                AudioSource.PlayClipAtPoint(_doorSFX, transform.position);
                 anim.SetTrigger("open");
             }
         }
         else
         {
-            UIHandler.instance.WarningRoutine("A porta esta trancada, procure pela chave correta");
+            UIHandler.Instance.WarningRoutine("A porta está trancada, procure pela chave correta");
         }
     }
 }

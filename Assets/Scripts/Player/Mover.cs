@@ -4,38 +4,39 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-
-    Rigidbody rig;
+    private Rigidbody rig;
     
-    [SerializeField] Transform cameraTransform;
-    Vector3 finalPosCamera;
-    Vector3 initialPosCamera;    
+    [SerializeField] private Transform _cameraTransform;
+    private Vector3 _finalPosCamera;
+    private Vector3 _initialPosCamera;    
 
-    [SerializeField] float movementForce = 10f;
-    [SerializeField] float squatHeight = 4f;
+    [SerializeField] private float _movementForce = 10f;
+    [SerializeField] private float _squatHeight = 4f;
     
-    [SerializeField] bool isSquating = false;
-    [SerializeField] bool doingMovement = false;
-    [SerializeField] bool canMove = true;
+    [SerializeField] private bool _isSquating = false;
+    [SerializeField] private bool _doingMovement = false;
+    [SerializeField] private bool _canMove = true;
 
-    [SerializeField] AudioClip[] stepSound;
-    [SerializeField] AudioSource audioSource;
+    [SerializeField] private AudioClip[] _stepSoundArray;
+    [SerializeField] private AudioSource _audioSource;
 
 
     private void Awake()
     {
         rig = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
     private void Start()
     {
-        initialPosCamera = cameraTransform.position;
+        _initialPosCamera = _cameraTransform.position;
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (!canMove) { return; }
+        if (!_canMove) 
+        { 
+            return; 
+        }
 
         Move();
         Squat();
@@ -43,74 +44,82 @@ public class Mover : MonoBehaviour
 
     private void Move()
     {
-        Debug.Log(rig.velocity.magnitude);
-        Debug.Log(movementForce);
-        if(rig.velocity.magnitude >= movementForce || isSquating) { return; }
+        if(rig.velocity.magnitude >= _movementForce 
+            || _isSquating) 
+        { 
+            return; 
+        }
 
         if (Input.GetKey(KeyCode.A))
         {
-            rig.AddForce(movementForce * -transform.right);
+            rig.AddForce(_movementForce * -transform.right);
             PlayAudio();
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rig.AddForce(movementForce * transform.right);
+            rig.AddForce(_movementForce * transform.right);
             PlayAudio();
         }
         if (Input.GetKey(KeyCode.W))
         {
-            rig.AddForce(movementForce * transform.forward);
+            rig.AddForce(_movementForce * transform.forward);
             PlayAudio();
         }
         if (Input.GetKey(KeyCode.S))
         {
-            rig.AddForce(movementForce * -transform.forward);
+            rig.AddForce(_movementForce * -transform.forward);
             PlayAudio();
         }
     }
 
     private void Squat()
     {
-        if (Input.GetKey(KeyCode.Space) && !doingMovement)
+        if (Input.GetKey(KeyCode.Space) 
+            && !_doingMovement)
         {
-            initialPosCamera = cameraTransform.position;
+            _initialPosCamera = _cameraTransform.position;
 
-            if (isSquating)
+            if (_isSquating)
             {
-                finalPosCamera = new Vector3(initialPosCamera.x, initialPosCamera.y + squatHeight, initialPosCamera.z);
+                _finalPosCamera = new Vector3(_initialPosCamera.x, _initialPosCamera.y + _squatHeight, _initialPosCamera.z);
             }
             else
             {
-                finalPosCamera = new Vector3(initialPosCamera.x, initialPosCamera.y - squatHeight, initialPosCamera.z);
+                _finalPosCamera = new Vector3(_initialPosCamera.x, _initialPosCamera.y - _squatHeight, _initialPosCamera.z);
             }
 
-            doingMovement = true;
+            _doingMovement = true;
             rig.isKinematic = true;
-            isSquating = !isSquating;
-            Debug.Log("Agachou");
+            _isSquating = !_isSquating;
         }
 
-        if (!doingMovement) return;
+        if (!_doingMovement)
+        { 
+            return; 
+        }
 
         float step = 2f * Time.deltaTime;
 
-        cameraTransform.position = Vector3.MoveTowards(cameraTransform.position, finalPosCamera, step);
-        if(cameraTransform.position == finalPosCamera)
+        _cameraTransform.position = Vector3.MoveTowards(_cameraTransform.position, _finalPosCamera, step);
+        if(_cameraTransform.position == _finalPosCamera)
         {
             rig.isKinematic = false;
-            doingMovement = false;
+            _doingMovement = false;
         }
     }
 
     private void PlayAudio()
     {
-        if (audioSource.isPlaying) { return; }
-        audioSource.clip = stepSound[Random.Range(0, stepSound.Length - 1)];
-        audioSource.Play();
+        if (_audioSource.isPlaying) 
+        { 
+            return; 
+        }
+        _audioSource.clip = _stepSoundArray[Random.Range(0, _stepSoundArray.Length - 1)];
+        _audioSource.Play();
     }
 
     public void SetCanMove(bool value)
     {
-        canMove = value;
+        _canMove = value;
     }
 }

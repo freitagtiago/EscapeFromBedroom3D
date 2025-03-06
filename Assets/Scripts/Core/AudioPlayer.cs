@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class AudioPlayer : MonoBehaviour
 {
-    public static AudioPlayer instance;
-    AudioSource audioSource;
-    [SerializeField] AudioClip[] musics;
+    public static AudioPlayer Instance;
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip[] _audioClipArray;
 
     private void Awake()
     {
-        if (instance)
+        if (Instance != null)
         {
             Destroy(this.gameObject);
+            return;
         }
         else
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Instance = this;
         }
-        audioSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(gameObject);
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -29,7 +30,7 @@ public class AudioPlayer : MonoBehaviour
 
     public void PlayMusic(int musicIndex)
     {
-        audioSource.clip = musics[musicIndex];
-        audioSource.Play();
+        _audioSource.clip = _audioClipArray[musicIndex];
+        _audioSource.Play();
     }
 }

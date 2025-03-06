@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class ItemConfig : ScriptableObject
 {
-    public string itemName; 
-    public string itemInfo;
-    public ItemType itemType;
-    public KeyType keyType;
-    public AudioClip audioClip;
+    public string _itemName; 
+    public string _itemInfo;
+    public ItemType _itemType;
+    public KeyType _keyType;
+    public AudioClip _audioClip;
 }

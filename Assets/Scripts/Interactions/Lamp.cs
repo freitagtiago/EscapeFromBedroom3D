@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Lamp : MonoBehaviour, IInteractable
 {
-    [SerializeField] Light lightObject;
-    [SerializeField] AudioClip audioClip;
+    [SerializeField] private Light _lightObject;
+    [SerializeField] private AudioClip _audioClip;
     public void Interact()
     {
-        AudioSource.PlayClipAtPoint(audioClip, transform.position);
-        Debug.Log(lightObject.enabled);
-        lightObject.enabled = !lightObject.enabled; 
+        AudioSource.PlayClipAtPoint(_audioClip, transform.position);
+        _lightObject.enabled = !_lightObject.enabled; 
     }
 }

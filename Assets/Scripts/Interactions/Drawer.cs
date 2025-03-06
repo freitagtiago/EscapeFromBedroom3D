@@ -4,43 +4,50 @@ using UnityEngine;
 
 public class Drawer : MonoBehaviour, IInteractable
 {
-    [SerializeField] bool canMove = false;
+    [SerializeField] private bool _canMove = false;
 
-    [SerializeField] int drawerIndex;
-    [SerializeField] float speed = 2f;
+    [SerializeField] private int _drawerIndex;
+    [SerializeField] private float _speed = 2f;
 
-    [SerializeField] bool isOpen = false;
-    [SerializeField] bool isLocked = false;
-    [SerializeField] bool animated = false;
+    [SerializeField] private bool _isOpen = false;
+    [SerializeField] private bool _isLocked = false;
+    [SerializeField] private bool _animated = false;
 
-    Vector3 closedPos;
-    Vector3 openedPos;
+    private Vector3 _closedPos;
+    private Vector3 _openedPos;
     
-    [SerializeField] Transform opened;
-    [SerializeField] Transform closed;
+    [SerializeField] private Transform _opened;
+    [SerializeField] private Transform _closed;
 
-    [SerializeField] KeyType neededKey = KeyType.None;
-    [SerializeField] ItemConfig itemToOpen;
+    [SerializeField] private KeyType _neededKey = KeyType.None;
+    [SerializeField] private ItemConfig _itemToOpen;
 
-    [SerializeField] string textToShowWhenOpen;
-    [SerializeField] ItemConfig item;
-    [SerializeField] AudioClip opening;
-    [SerializeField] AudioClip locked;
+    [SerializeField] private string _textToShowWhenOpen;
+    [SerializeField] private ItemConfig _item;
+    [SerializeField] private AudioClip _opening;
+    [SerializeField] private AudioClip _locked;
 
     private void Start()
     {
-        if(!animated) { return; }
+        if(!_animated) 
+        { 
+            return; 
+        }
 
-        openedPos = opened.position;
-        closedPos = transform.position;
+        _openedPos = _opened.position;
+        _closedPos = transform.position;
     }
 
     private void Update()
     {
-        if (!animated || !canMove) { return; }
+        if (!_animated 
+            || !_canMove) 
+        { 
+            return; 
+        }
         
-        float step = speed * Time.deltaTime;
-        if (isOpen)
+        float step = _speed * Time.deltaTime;
+        if (_isOpen)
         {
             CloseDrawer(step);
         }
@@ -52,74 +59,74 @@ public class Drawer : MonoBehaviour, IInteractable
     
     private void OpenDrawer(float step)
     {
-       transform.position = Vector3.MoveTowards(transform.position, openedPos, step);
-        if (transform.position == openedPos)
+       transform.position = Vector3.MoveTowards(transform.position, _openedPos, step);
+        if (transform.position == _openedPos)
         {
-            canMove = false;
-            isOpen = true;
+            _canMove = false;
+            _isOpen = true;
         }
     }
 
     private void CloseDrawer(float step)
     {
-        transform.position = Vector3.MoveTowards(transform.position, closedPos, step);
-        if (transform.position == closedPos)
+        transform.position = Vector3.MoveTowards(transform.position, _closedPos, step);
+        if (transform.position == _closedPos)
         {
-            canMove = false;
-            isOpen = false;
+            _canMove = false;
+            _isOpen = false;
         }
     }
 
     public void Interact()
     {
-        if (isLocked)
+        if (_isLocked)
         {
-            if (itemToOpen)
+            if (_itemToOpen)
             {
-                if(Inventory.instance.HasThisItem(itemToOpen))
+                if(Inventory.Instance.HasThisItem(_itemToOpen))
                 {
-                    isLocked = false;
-                    UIHandler.instance.WarningRoutine("Usando " + itemToOpen.itemName + ", conseguiu abrir a gaveta");
+                    _isLocked = false;
+                    UIHandler.Instance.WarningRoutine("Usando " + _itemToOpen._itemName + ", conseguiu abrir a gaveta");
                     return;
                 }
                 else
                 {
-                    AudioSource.PlayClipAtPoint(locked, transform.position);
-                    UIHandler.instance.WarningRoutine("A gaveta esta emperrada");
+                    AudioSource.PlayClipAtPoint(_locked, transform.position);
+                    UIHandler.Instance.WarningRoutine("A gaveta está emperrada");
                     return;
                 }
             }
             else
             {
-                if (Inventory.instance.HasThisKey(neededKey))
+                if (Inventory.Instance.HasThisKey(_neededKey))
                 {
-                    UIHandler.instance.WarningRoutine("A gaveta foi destrancada");
-                    isLocked = false;
+                    UIHandler.Instance.WarningRoutine("A gaveta foi destrancada");
+                    _isLocked = false;
                 }
                 else
                 {
-                    AudioSource.PlayClipAtPoint(locked, transform.position);
-                    UIHandler.instance.WarningRoutine("Esta gaveta esta trancada, procure pela chave");
+                    AudioSource.PlayClipAtPoint(_locked, transform.position);
+                    UIHandler.Instance.WarningRoutine("Esta gaveta está trancada, procure pela chave");
                     return;
                 }
             }
         }
 
-        if (animated)
+        if (_animated)
         {
-            canMove = true;
-            AudioSource.PlayClipAtPoint(opening, transform.position);
+            _canMove = true;
+            AudioSource.PlayClipAtPoint(_opening, transform.position);
         }
         else
         {
-            if(item != null)
+            if(_item != null)
             {
-                Inventory.instance.AddItem(item);
-                item = null;
+                Inventory.Instance.AddItem(_item);
+                _item = null;
             }
-            else if(textToShowWhenOpen != null)
+            else if(_textToShowWhenOpen != null)
             {
-                UIHandler.instance.WarningRoutine(textToShowWhenOpen);
+                UIHandler.Instance.WarningRoutine(_textToShowWhenOpen);
             }
         }
     }

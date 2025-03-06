@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ItemHolder : MonoBehaviour, IInteractable
 {
-    [SerializeField] ItemConfig item;
+    [SerializeField] private ItemConfig _item;
 
     public void Interact()
     {
-        Inventory.instance.AddItem(item);
+        Inventory.Instance.AddItem(_item);
         Destroy(gameObject);
     }
 

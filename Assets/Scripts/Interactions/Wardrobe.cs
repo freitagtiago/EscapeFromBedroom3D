@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class Wardrobe : MonoBehaviour, IInteractable
 {
-    [SerializeField] ItemConfig item;
-    [SerializeField] bool isLocked = true;
-    [SerializeField] ItemConfig itemToOpen;
+    [SerializeField] private ItemConfig _item;
+    [SerializeField] private bool _isLocked = true;
+    [SerializeField] private ItemConfig _itemToOpen;
 
     public void Interact()
     {
-        if (isLocked) 
+        if (_isLocked) 
         {
-            if (Inventory.instance.HasThisItem(itemToOpen))
+            if (Inventory.Instance.HasThisItem(_itemToOpen))
             {
-                isLocked = false;
-                UIHandler.instance.WarningRoutine("Usando " + itemToOpen.itemName + ", conseguiu abrir o armário");
+                _isLocked = false;
+                UIHandler.Instance.WarningRoutine("Usando " + _itemToOpen._itemName + ", conseguiu abrir o armário");
             }
             else
             {
-                UIHandler.instance.WarningRoutine("A porta esta emperrada");
+                UIHandler.Instance.WarningRoutine("A porta está emperrada");
                 return;
             }
         }
         else
         {
-            if (item != null)
+            if (_item != null)
             {
-                Inventory.instance.AddItem(item);
-                item = null;
+                Inventory.Instance.AddItem(_item);
+                _item = null;
             }
             else
             {
-                UIHandler.instance.WarningRoutine("Nada foi encontrado por aqui.");
+                UIHandler.Instance.WarningRoutine("Nada foi encontrado por aqui.");
             }
         }
     }

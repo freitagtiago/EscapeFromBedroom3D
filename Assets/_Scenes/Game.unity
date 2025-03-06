@@ -602,8 +602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!54 &115245823
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tecle ESC para abri o MENU
+  m_text: ESC - Abrir menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1486,10 +1486,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caffcdd7a87d63d4fa226469577075c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemSlotPrefab: {fileID: -5701878570235879081, guid: b7205942c094afb45a175cfc45a087a9,
-    type: 3}
-  itemName: {fileID: 893069973}
-  itemInfo: {fileID: 1056242231}
+  _itemSlotPrefab: {fileID: 0}
+  _itemName: {fileID: 0}
+  _itemInfo: {fileID: 0}
 --- !u!114 &346869649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,8 +1826,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!54 &540131929
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2923,14 +2922,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ded24f5e380ce4890ee246e3103ab7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 963194228}
-  movementForce: 75
-  squatHeight: 4
-  isSquating: 0
-  doingMovement: 0
-  canMove: 1
-  stepSound:
-  - {fileID: 8300000, guid: a3f75dc8f23f4a84b917bf7217cd2c79, type: 3}
+  _cameraTransform: {fileID: 963194228}
+  _movementForce: 10
+  _squatHeight: 4
+  _isSquating: 0
+  _doingMovement: 0
+  _canMove: 1
+  _stepSoundArray:
   - {fileID: 8300000, guid: c1d293797e604f04983334384a3f7164, type: 3}
   - {fileID: 8300000, guid: c201f837faf00484e9d985a904db41d8, type: 3}
   - {fileID: 8300000, guid: cf3e8efbdac7e6c4ca2ef9a40c9e6e4c, type: 3}
@@ -2938,7 +2936,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 51d5f506fcdf12a41bbec6a56776dcdb, type: 3}
   - {fileID: 8300000, guid: 1736bafdeaacec04a8bb3245a9a7d4a8, type: 3}
   - {fileID: 8300000, guid: 238787b26508f8b43a2a7e31e40b1990, type: 3}
-  audioSource: {fileID: 0}
+  _audioSource: {fileID: 0}
 --- !u!114 &922035343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2951,7 +2949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604b608e93e79684cacc57d9a75faded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  _itemList: []
 --- !u!82 &922035344
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3060,7 +3058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b8c24cab99f0147928f840c96a4a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableDistance: 7
+  _interactableDistance: 4.5
 --- !u!1001 &923317337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3420,8 +3418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a488d581a2eb145836a2f595ab4e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 20
-  clampAngle: 80
+  _rotationSpeed: 2
+  _clampAngle: 80
 --- !u!1 &1018100553
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,8 +3468,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!64 &1018100556
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3753,8 +3751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!54 &1063409758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3933,8 +3931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!54 &1115702072
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4259,8 +4257,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "W,A,S,D : Movimenta\xE7\xE3o\nSETAS: Rota\xE7\xE3o da c\xE2mera\nBOT\xC3O
-    DIREITO DO MOUSE: Interagir com objetos\nESPA\xC7O: Agachar\nI: Acessar invent\xE1rio"
+  m_text: "W,A,S,D : Movimentar-se\nSETAS: Rotacionar a c\xE2mera\nBOT\xC3O DIREITO
+    DO MOUSE: Interagir com objetos\nESPA\xC7O: Agachar\nI: Acessar invent\xE1rio"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4457,13 +4455,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab3b0526c97a32a4e8af0078a0452229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warningDuration: 3
-  initText: 'Hora: 02:57  Dia: Desconhecido'
-  messagePanel: {fileID: 2086027454}
-  inventoryPanel: {fileID: 1917834052}
-  messageDisplayer: {fileID: 490372305}
-  usePillsText: {fileID: 2082735672}
-  returnToMenu: {fileID: 1666801131}
+  _warningDuration: 3
+  _initText: 
+  _messagePanel: {fileID: 2086027454}
+  _inventoryPanel: {fileID: 1917834052}
+  _messageDisplayer: {fileID: 490372305}
+  _usePillsText: {fileID: 2082735672}
+  _returnToMenu: {fileID: 579918307}
 --- !u!1 &1271477423
 GameObject:
   m_ObjectHideFlags: 0
@@ -5213,7 +5211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 21d01285dee3b74469b31df2dd3eea86, type: 2}
+  _item: {fileID: 0}
 --- !u!54 &1642099796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6175,20 +6173,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 0
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 0
-  opened: {fileID: 0}
-  closed: {fileID: 0}
-  neededKey: 0
-  itemToOpen: {fileID: 0}
-  textToShowWhenOpen: 
-  item: {fileID: 0}
-  opening: {fileID: 0}
-  locked: {fileID: 0}
+  _canMove: 0
+  _drawerIndex: 0
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!1 &1853979520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b268aefee3dc7b64c893d56d26af940d,
@@ -6808,7 +6806,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Voc\xEA encontrou  um medicamento. Deseja tomar?"
+  m_text: "Voc\xEA encontrou  um medicamento. Deseja tom\xE1-lo?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7393,9 +7391,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 176d5d1ab11390d4d8f4830e1cd8bc17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e04fceb2bb18ca443a0d61524014b53e, type: 2}
-  isLocked: 1
-  itemToOpen: {fileID: 11400000, guid: 9a5ae47e252ccda49976821667141889, type: 2}
+  _item: {fileID: 0}
+  _isLocked: 1
+  _itemToOpen: {fileID: 0}
 --- !u!1 &943047688755498760
 GameObject:
   m_ObjectHideFlags: 0
@@ -7655,7 +7653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: e4c384cabb9e7f54dac98c5467dff6af, type: 2}
+  _item: {fileID: 0}
 --- !u!1001 &1704499971131278354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8276,8 +8274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 47725a0577e451f45b2a37328490070f, type: 2}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!4 &2526987272859911172
 Transform:
   m_ObjectHideFlags: 0
@@ -8600,20 +8598,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 0
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 1
-  opened: {fileID: 1083426682}
-  closed: {fileID: 0}
-  neededKey: 0
-  itemToOpen: {fileID: 0}
-  textToShowWhenOpen: 
-  item: {fileID: 0}
-  opening: {fileID: 8300000, guid: 00a99f6394bd16741b75ad02e438f8cd, type: 3}
-  locked: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+  _canMove: 0
+  _drawerIndex: 0
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!54 &3567189506556736330
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9082,20 +9080,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 3
-  speed: 2
-  isOpen: 0
-  isLocked: 1
-  animated: 1
-  opened: {fileID: 240152524}
-  closed: {fileID: 0}
-  neededKey: 1
-  itemToOpen: {fileID: 0}
-  textToShowWhenOpen: 
-  item: {fileID: 0}
-  opening: {fileID: 8300000, guid: 00a99f6394bd16741b75ad02e438f8cd, type: 3}
-  locked: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+  _canMove: 0
+  _drawerIndex: 0
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!1 &5066563871093117100
 GameObject:
   m_ObjectHideFlags: 0
@@ -9178,8 +9176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!4 &5307751112276146909
 Transform:
   m_ObjectHideFlags: 0
@@ -9375,8 +9373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce1c3772f61cc42aa919d9270452e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
-  sentence: Uma pintura antiga.
+  _item: {fileID: 0}
+  _sentence: 
 --- !u!33 &5855941824561325676
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9497,7 +9495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 68cd3c4b5d5a51746841a7ffdca4d94a, type: 2}
+  _item: {fileID: 0}
 --- !u!1 &6176002507366789004
 GameObject:
   m_ObjectHideFlags: 0
@@ -9843,7 +9841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3252d9434514ed45b09020c2833f37c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 9a5ae47e252ccda49976821667141889, type: 2}
+  _item: {fileID: 0}
 --- !u!4 &6703820419914373942
 Transform:
   m_ObjectHideFlags: 0
@@ -10311,20 +10309,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3d49b56309dee48b36bcefdf974f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 0
-  drawerIndex: 2
-  speed: 2
-  isOpen: 0
-  isLocked: 0
-  animated: 1
-  opened: {fileID: 210315064}
-  closed: {fileID: 0}
-  neededKey: 0
-  itemToOpen: {fileID: 0}
-  textToShowWhenOpen: 
-  item: {fileID: 0}
-  opening: {fileID: 8300000, guid: 00a99f6394bd16741b75ad02e438f8cd, type: 3}
-  locked: {fileID: 8300000, guid: d6c0839867f1130439741b62aedd41d1, type: 3}
+  _canMove: 0
+  _drawerIndex: 0
+  _speed: 2
+  _isOpen: 0
+  _isLocked: 0
+  _animated: 0
+  _opened: {fileID: 0}
+  _closed: {fileID: 0}
+  _neededKey: 0
+  _itemToOpen: {fileID: 0}
+  _textToShowWhenOpen: 
+  _item: {fileID: 0}
+  _opening: {fileID: 0}
+  _locked: {fileID: 0}
 --- !u!54 &8039795340305513425
 Rigidbody:
   m_ObjectHideFlags: 0
